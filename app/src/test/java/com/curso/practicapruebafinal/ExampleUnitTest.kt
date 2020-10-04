@@ -10,9 +10,5 @@ import org.junit.Test
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
-    private val service = Repository()
-    @Test
-    fun addition_isCorrect() {
-       service.getBreedsFromServer()
-    }
+
 }

@@ -1,14 +1,17 @@
 package com.curso.practicapruebafinal.model.remote
 
 import retrofit2.Call
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Url
+
 
 interface Api {
 
-    @GET("list")
-    fun getBreedsFromApi() : Call<List<BredAndImages>>
+    @GET("pokemon")
+    fun getPokemonFromApi(): Call<ResponseApi>
 
-    @GET("breed/{name}/images")
-    fun getBreedImageFromApi(@Path("name")name:String):Call<List<BredAndImages>>
+    @GET("pokemon/{name}")
+    fun getPokemonFromAmiAbilities(@Path("name") name:String): Call<ResponseApi>
 }
